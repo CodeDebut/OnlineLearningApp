@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E88E5"
+    tools:context=".Quizz">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề bài kiểm tra"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Câu hỏi 1 -->
+    <TextView
+        android:id="@+id/tvQuestion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Câu hỏi 1 :"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="24dp" />
+
+    <RadioGroup
+        android:id="@+id/rgAnswers1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion1"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbAnswer1A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án A"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer1B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án B"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer1C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án C"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer1D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án D"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+    </RadioGroup>
+
+    <!-- Câu hỏi 2 -->
+    <TextView
+        android:id="@+id/tvQuestion2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Câu hỏi 2 :"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgAnswers1"
+        android:layout_marginTop="24dp" />
+
+    <!-- Nút Submit -->
+
+    <RadioGroup
+        android:id="@+id/rgAnswers2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion2">
+
+        <RadioButton
+            android:id="@+id/rbAnswer2A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án A"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer2B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án B"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer2C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án C"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+        <RadioButton
+            android:id="@+id/rbAnswer2D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phương án D"
+            android:textColor="#FFFFFF"
+            android:button="@drawable/radio_button_rounded"
+            android:background="@drawable/radio_button_background" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:background="#1565C0"
+        app:layout_constraintTop_toBottomOf="@id/rgAnswers2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Thông báo kết quả -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kết quả: 0/0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.onlinelearningapp'
+    namespace 'com.example.prm392project'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.onlinelearningapp"
-        minSdk 24
+        applicationId "com.example.prm392project"
+        minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"
